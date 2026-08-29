@@ -9,10 +9,10 @@ describe('ClientModule', () => {
   beforeEach(async () => {
     module = await Test.createTestingModule({
       imports: [ClientModule],
-    })
-      .overrideProvider(ConfigService)
-      .useValue({ getOrThrow: jest.fn() })
-      .compile();
+      providers: [
+        { provide: ConfigService, useValue: { getOrThrow: jest.fn() } },
+      ],
+    }).compile();
   });
 
   afterEach(async () => {
