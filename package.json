@@ -22,11 +22,13 @@
   },
   "dependencies": {
     "@discordjs/voice": "^0.19.2",
+    "@nestjs/axios": "^12.0.0",
     "@nestjs/common": "^12.0.1",
     "@nestjs/config": "^12.0.0",
     "@nestjs/core": "^12.0.1",
     "@nestjs/observe": "^0.1.8",
     "@nestjs/platform-express": "^12.0.1",
+    "axios": "^1.20.0",
     "discord.js": "^14.27.0",
     "dotenv": "^17.4.2",
     "reflect-metadata": "^0.2.2",
