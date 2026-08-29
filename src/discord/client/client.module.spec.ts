@@ -9,10 +9,10 @@ describe('ClientModule', () => {
   beforeEach(async () => {
     module = await Test.createTestingModule({
       imports: [ClientModule],
-      providers: [
-        { provide: ConfigService, useValue: { getOrThrow: jest.fn() } },
-      ],
-    }).compile();
+    })
+      .overrideProvider(ConfigService)
+      .useValue({ getOrThrow: jest.fn().mockReturnValue('test-token') })
+      .compile();
   });
 
   afterEach(async () => {
